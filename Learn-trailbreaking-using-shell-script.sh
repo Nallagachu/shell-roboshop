@@ -5,54 +5,34 @@ G="\e[32m"
 Y="\e[33m"
 C="\e[36m"
 N="\e[0m"
-LOG_FILE="/tmp/trail_braking_awareness.log"
-clear
+LOG_FILE="/tmp/trail_braking_youtube_awareness.log"
 
-echo -e "$C========== Trail Braking Awareness ==========$N"
-echo -e "Welcome, rider! This script will help you understand the concept of trail braking." | tee -a $LOG_FILE
+echo -e "$C========== Trail Braking Video Awareness ==========$N"
+echo -e "$YThis script demonstrates how a shell script can be used to raise awareness about trail braking using real-world YouTube content.$N"
+echo -e "We will now open a few short videos in your browser that:\n - Teach the concept\n - Show its practical usage\n - Reflect how it helps in daily riding.\n" | tee -a $LOG_FILE
 
-echo
-echo -e "$Y Do you know what trail braking is? (yes/no): $N"
-read answer
+echo -e "$Y Do you want to continue? (yes/no): $N"
+read choice
 
-if [[ "$answer" =~ ^[Nn] ]]
-then
-  echo -e "$G Trail braking is a technique where you continue to apply the brakes while entering a corner... $N" | tee -a $LOG_FILE
-  sleep 2
-  echo -e "$C It helps to: \n - Control speed \n - Increase front tire grip \n - Adjust line mid-corner $N" | tee -a $LOG_FILE
+if [[ "$choice" =~ ^[Yy] ]]; then
+    echo -e "$G Opening awareness videos...$N"
+    echo "Opened trail braking videos at $(date)" >> $LOG_FILE
+
+    echo -e "\n$C1️⃣ Learn the Concept: What is Trail Braking?$N"
+    echo "Video: https://www.youtube.com/watch?v=8d5HbU581sI"
+    xdg-open "https://www.youtube.com/watch?v=8d5HbU581sI" &>/dev/null
+    sleep 3
+
+    echo -e "\n$C2️⃣ Observe the Application: Why is he trail braking?$N"
+    echo "Video: https://www.youtube.com/shorts/8ckd7xMcCiU"
+    xdg-open "https://www.youtube.com/shorts/8ckd7xMcCiU" &>/dev/null
+    sleep 3
+
+    echo -e "\n$C3️⃣ Realize the Impact: How it helps in daily life.$N"
+    echo "Video: https://www.youtube.com/watch?v=8d5HbU581sI"
+    xdg-open "https://www.youtube.com/watch?v=8d5HbU581sI" &>/dev/null
+
+    echo -e "\n$G Videos launched successfully. Watch and reflect on how trail braking improves control, safety, and confidence.$N"
 else
-  echo -e "$G Great! Let's reinforce the importance with some scenarios... $N" | tee -a $LOG_FILE
+    echo -e "$R Awareness videos skipped. Remember, knowledge can save lives. Ride safe! 🏍️ $N"
 fi
-
-echo
-echo -e "$Y Scenario 1: You're approaching a tight corner too fast... $N"
-sleep 2
-echo -e "$C Applying light brakes while leaning in = safer turn with more control $N"
-sleep 2
-
-echo
-echo -e "$Y Scenario 2: Mid-turn, a patch of gravel appears! $N"
-sleep 2
-echo -e "$R Sudden braking could cause a crash... $N"
-sleep 1
-echo -e "$G But if you're already trail braking, you’re more stable and can respond better. $N"
-sleep 2
-
-echo
-echo -e "$C✅ Trail braking improves control and safety. $N" | tee -a $LOG_FILE
-
-echo -e "\nWould you like to test your awareness with a quick quiz? (yes/no):"
-read quiz
-
-if [[ "$quiz" =~ ^[Yy] ]]
-then
-  echo -e "$Y Question: Should you abruptly grab the front brake mid-corner? (yes/no): $N"
-  read q1
-  if [[ "$q1" =~ ^[Nn] ]]; then
-    echo -e "$G Correct! Sudden braking mid-turn can cause loss of traction. $N"
-  else
-    echo -e "$R Incorrect. Smooth, controlled braking is key! $N"
-  fi
-fi
-
-echo -e "$C Thank you for spreading awareness on trail braking. Ride safe! 🏍️ $N"
