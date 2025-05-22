@@ -6,7 +6,10 @@ INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipp
 ZONE_ID="Z10031831EHO6D6LW9W2V"  # Replace with your Zone ID
 DOMAIN_NAME="saijyo.store"       # Replace with your domain
 
-for instance in "${INSTANCES[@]}"; do
+#for instance in "${INSTANCES[@]}";
+
+for instance in $@
+do 
     INSTANCE_ID=$(aws ec2 run-instances --image-id "$AMI_ID" --instance-type t3.micro --security-group-ids "$SG_ID" \
         --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
 
