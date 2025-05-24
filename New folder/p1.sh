@@ -1,5 +1,1 @@
-#!/bin/bash
-echo "Enter Your Name"
-read name 
-echo "Hello $name "
-echo "Are we done "
+echo "Hello, $name! You have $count messages."
