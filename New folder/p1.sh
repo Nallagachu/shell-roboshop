@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Enter your name as per format:"
-read name 123333
-echo "It's yes, your name is $name! Do it—that's awesome, bro! Yoyo Honey Sinasdh!"
+ echo " sai write your name "
+  read {I want you to read name}
+   echo " yes $ {I want you to read name}
