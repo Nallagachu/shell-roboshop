@@ -1,4 +1,5 @@
 #!/bin/bash
- echo " sai write your name "
-  read {I want you to read name}
-   echo " yes $ {I want you to read name}
+echo "Enter Your Name"
+read name 
+echo "Hello $name "
+echo "Are we done "
