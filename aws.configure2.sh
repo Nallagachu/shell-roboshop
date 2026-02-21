@@ -1,9 +1,9 @@
 #!/bin/bash
 
-AMI_ID="ami-09c813fb71547fc4f"  # Replace with your AMI ID
-SG_ID="sg-07bff43b0fdaef85d"     # Replace with your SG ID
+AMI_ID="ami-0220d79f3f480ecf5"  # Replace with your AMI ID
+SG_ID="sg-093b29ce8eeedf781"     # Replace with your SG ID
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-ZONE_ID="Z10031831EHO6D6LW9W2V"  # Replace with your Zone ID
+ZONE_ID="Z062034323LY47ZYOC2ZR"  # Replace with your Zone ID
 DOMAIN_NAME="saijyo.store"       # Replace with your domain
 
 #for instance in "${INSTANCES[@]}";
