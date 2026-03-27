@@ -4,7 +4,6 @@ AMI_ID="ami-0220d79f3f480ecf5"
 SG_ID="sg-090f025cfbd817fa8"
 ZONE_ID="Z0958532294CVT5P59JI0"
 DOMAIN_NAME="saijyo.store"
-
 for instance in $@
 do 
     echo "Creating instance: $instance"
