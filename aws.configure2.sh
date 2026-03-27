@@ -1,8 +1,8 @@
 #!/bin/bash
 
 AMI_ID="ami-0220d79f3f480ecf5"
-SG_ID="sg-093b29ce8eeedf781"
-ZONE_ID="Z062034323LY47ZYOC2ZR"
+SG_ID="sg-090f025cfbd817fa8"
+ZONE_ID="Z0958532294CVT5P59JI0"
 DOMAIN_NAME="saijyo.store"
 
 for instance in $@
