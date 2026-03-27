@@ -3,7 +3,7 @@
 AMI_ID="ami-0220d79f3f480ecf5"  # Replace with your AMI ID
 SG_ID="sg-090f025cfbd817fa8"     # Replace with your SG ID
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-ZONE_ID="Z062034323LY47ZYOC2ZR"  # Replace with your Zone ID
+ZONE_ID="Z0958532294CVT5P59JI0"  # Replace with your Zone ID
 DOMAIN_NAME="saijyo.store"       # Replace with your domain
 
 for instance in "${INSTANCES[@]}"; do
